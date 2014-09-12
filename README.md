@@ -41,10 +41,14 @@ String. Message to display.
 Object.
 
     {
-      ok: "Text of OK button"
-      cancel: "Text of Cancel button"
-      option: "Text of optional button" - goes to the left of the Cancel button. The text of the button is returned in the onClose method if clicked.
+      ok: "OK",
+      cancel: "Cancel",
+      option: ""
     }
+
+* **ok** - String. Text of OK button.
+* **cancel** - String. Text of Cancel button.
+* **option** - String. Text of optional button. If defined the option button goes to the left of the Cancel button. The text of the button is returned in the onClose method if clicked.
 
 ### $.set(settings)
 

@@ -1,4 +1,4 @@
-# jQuery plugin to create modal dialogs and forms.
+# jQuery plugin to create modal dialogs.
 
 I needed to create modal dialogs and forms such as alert, confirm, contact us, and login. I didn't want to use Bootstrap's built in dialogs.
 

@@ -68,7 +68,7 @@ Object.
       }
     }
 
-* **path** - String. Path to dialog template files. This is prepended before the name of the dialog.
+* **path** - String. Path to dialog template files. This is prepended before the name of the dialog. I leave this blank because our site is in multiple languages. This allows me to have a translation of the dialog because the translations are in sub-folders off the root folder. We use **esmx** for Mexico, **eses** for Spain, **zhcn** for china, ... Leaving this blank will cause the dialog template file to be retrieved from the current path.
 * **extension** - String. Extension of template file. This is added after the name of the dialog.
 * **replace** - Boolean. If true replace the contents of the dialog each time it is displayed. If false, retain the contents of the dialog.
 * **blocker** - String. Template of blocker element that contains the dialog.

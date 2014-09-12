@@ -68,12 +68,16 @@ Object.
       }
     }
 
-* **path** - String. Path to dialog template files. This is prepended before the name of the dialog. I leave this blank because our site is in multiple languages. This allows me to have a translation of each dialog because the page translations are in sub-folders off the root folder. We use **esmx** for Mexico, **eses** for Spain, **zhcn** for china, ... Leaving this blank will cause the dialog template file to be retrieved from the current path. Our site is not content managed and does not reside in a database. Each translation only has 18 pages including dialogs. Being file based with some back end database functionality makes it very lightweight and fast.
+* **path** - String. Path to dialog template files. This is prepended before the name of the dialog.
+
+    I leave this blank because our site is in multiple languages. This allows me to have a translation of each dialog because the page translations are in sub-folders off the root folder. For folder names we use a combination of a 2 digit language code and 2 digit country code, **esmx** for Mexico, **eses** for Spain, **zhcn** for china, ...
+
+    Leaving this blank will cause the dialog template file to be retrieved from the current path.
 * **extension** - String. Extension of template file. This is added after the name of the dialog.
 * **replace** - Boolean. If true replace the contents of the dialog each time it is displayed. If false, retain the contents of the dialog.
 * **blocker** - String. Template of blocker element that contains the dialog.
 * **confirm** - Object.
-  * **option_btn_start** - String. Template of option button. Use when you want 3 buttons on a confirm. This is the third button on the left.
+  * **option_btn_start** - String. Template of option button. Used when you want 3 buttons on a confirm dialog. This will be the third button on the left.
   * **option_btn_end** - String. Template of the end of the option button element.
   * **option_btn_class** - String. Used to search for the option button to add or remove click behavior. Also used to remove the button if replace is set to false.
 
@@ -81,15 +85,15 @@ Object.
 
 ### .onOpen(function(element){})
 
-Calls passed function with the blocker element as the argument.
+When the dialog opens, the passed function is called with the blocker element as the argument.
 
 ### .onClose(function(element){})
 
-Calls passed function with the blocker element as the argument.
+When the dialog closes, the passed function is called with the blocker element as the argument.
 
 ### .onClose(function(boolean or text of optional button){})
 
-Confirm only. Calls passed function with a boolean or string argument denoting the button the user clicked.
+Confirm only. When the confirm dialog is closed, the passed function is called with a boolean or string argument denoting the button the user clicked.
 
 * True if the user clicked the OK button.
 * False if the user clicked the Cancel button.
@@ -99,7 +103,11 @@ Confirm only. Calls passed function with a boolean or string argument denoting t
 
 **msecs**
 
-Number. Milliseconds to wait before closing the dialog. By default the dialog will stay open until the user clicks the button.
+Number. Milliseconds to wait before closing the dialog.
+
+By default the dialog will stay open until the user clicks the button. This can be used to open a dialog, like an alert that doesn't require interaction from the user. Display the dialog long enough for the user to read it and then the dialog will automatically close. If the user reads faster than the time allotted for reading the dialog, the user can close the dialog before it is automatically closed by clicking the dialog button.
+
+If used with the .confirm method, the onClose promise will pass false as its argument when the dialog automatically closes.
  
 ## How it Works
 

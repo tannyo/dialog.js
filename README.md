@@ -6,7 +6,7 @@ I needed to create modal dialogs and forms such as alert, confirm, contact us, a
 
     <script src="path/to/dialog.js"></script>
 
-## dependencies
+## Dependencies
 
 jQuery
 

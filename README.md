@@ -117,6 +117,13 @@ It creates a div with the class of "blocker fade" at the end of the body. It get
 
 Tested in the latest versions of Chrome, Firefox, Safari, IE 5.5 - 11, iOS, and Android.
 
+## Notes
+
+* This cannot be run from file:// because of ajax calls to get the dialog template files.
+* This is not a full templating system like Angular, Mustache, Backbone, Handlebarsjs, or any one of the many available javascript templating systems. This plugin allows you to define a html file that is displayed as a dialog. There are certain classes that it expects for buttons and the message element for alert and confirm dialogs. It is good for displaying an alert getting a confirmation or for simple forms like a contact us form.
+
+  You should not use it for web pages that need to be searched by search engines which is why it is perfect for alerts, confirmations, and simple forms.
+
 ## Issues
 
 Have a bug? Please create an [issue](https://github.com/tannyo/dialog.js/issues) here on GitHub!

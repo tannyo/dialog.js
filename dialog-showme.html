@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dialog - Show Me</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dialog.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="dialog.js"></script>
+  <script src="dialog-showme.js"></script>
+  <style>
+    /* Form styles */
+    #contact-form .error {
+      color: #f00;
+      text-align: left;
+    }
+    #contact-form form {
+      margin: 2.85714286em 14%;
+      text-align: center;
+    }
+    #contact-form .dialog {
+      top: 0;
+      max-height: 100%;
+      overflow-y: scroll;
+    }
+    @media (min-height: 600px) {
+      #contact-form .dialog {
+        top: 50px;
+      }
+    }
+    @media (min-height: 660px) {
+      #contact-form .dialog {
+        top: 100px;
+        height: auto;
+        overflow-y: visible;
+      }
+    }
+
+    #contact-form textarea {
+      resize:vertical;
+    }
+    @media (min-width: 525px) {
+      #contact-form .dialog {
+        width: 525px;
+      }
+      #contact-form form {
+        margin: 2.85714286em 6em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>Dialog - Show Me</h1>
+      <p>Example of how to use dialog.js</p>
+      <p><button id="simple-alert" class="btn btn-default">Alert</button> <button id="multi-line-alert" class="btn btn-default">Multi-Line Alert</button> <button id="auto-close-alert" class="btn btn-default">Auto Close Alert</button></p>
+      <p><button id="simple-confirm" class="btn btn-default">Confirm</button> <button id="three-btn-confirm" class="btn btn-default">Three Button Confirm</button></p>
+      <p><button id="contact-us" class="btn btn-default">Sample Contact Us Form</button></p>
+    </div>
+  </div>
+</body>
+</html>

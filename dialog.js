@@ -43,7 +43,7 @@
     replace: true,
     blocker: '<div class="blocker fade"></div>',
     confirm: {
-      option_btn_start: '<button class="btn btn-default option" type="button">',
+      option_btn_start: '<button class="btn btn-warning option" type="button">',
       option_btn_end: '</button>',
       option_btn_class: 'option'
     }
@@ -78,9 +78,6 @@
       // Hide the dialog.
       dialogEl.hide().removeClass("in");
 
-      // Run the close function.
-      dialog.onClose(dialogEl);
-
       // Remove click handlers.
       dialogEl.find(".cancel, .ok, ." + settings.confirm.option_btn_class).off("click.dialog");
 
@@ -90,6 +87,9 @@
       // Remove key handlers.
       $(document).off("keyup.dialog");
       $(document).off("keydown.dialog");
+
+      // Run the close function.
+      dialog.onClose(dialogEl);
 
       // Delete the open dialog object for this dialog.
       dialog = {};
